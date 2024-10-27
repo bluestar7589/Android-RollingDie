@@ -1,19 +1,15 @@
 package com.example.rollingdie
 
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.widget.Button
-import androidx.activity.enableEdgeToEdge
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.commit
 
 class MainActivity : AppCompatActivity(), ScreenGame.OnFragmentInteractionListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.game_new)
+        setContentView(R.layout.activity_main)
+        Log.d("Main Activity", "Main Activity created")
     }
 
     override fun onFragmentInteraction(uri: Uri) {

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="Rolling Die Game"
         android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/new_game_button"
+        app:layout_constraintBottom_toTopOf="@+id/newGameButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,7 +22,7 @@
 
     <!-- Button to start a new game -->
     <Button
-        android:id="@+id/new_game_button"
+        android:id="@+id/newGameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
