@@ -20,7 +20,7 @@
         android:label="game_screen"
         tools:layout="@layout/game_screen" >
         <action
-            android:id="@+id/action_screenGame_to_newGame"
+            android:id="@+id/backToNewGame"
             app:destination="@id/newGame" />
     </fragment>
 </navigation>
