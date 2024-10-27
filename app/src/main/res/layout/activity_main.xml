@@ -7,91 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- ImageView to display the die rolling animation -->
-    <ImageView
-        android:id="@+id/die_gif"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- TextView to show whose turn it is -->
-    <TextView
-        android:id="@+id/turn_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Player 1's Turn"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/score_info"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/die_gif" />
-
-    <!-- TextView to show the current score and total scores for each player -->
-
-    <!-- TextView to display the result of the die roll -->
-
-    <!-- Button to roll the die -->
-
-    <!-- Button to pass the turn -->
-
-    <!-- Button to start a new game -->
-    <TextView
-        android:id="@+id/score_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
-        android:text="Current Score: 0\nPlayer 1 Total: 0\nPlayer 2 Total: 0"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/result_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/result_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
-        android:text="Result"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/roll_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/roll_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Roll"
-        app:layout_constraintBottom_toTopOf="@+id/new_game_button"
-        app:layout_constraintEnd_toStartOf="@+id/pass_button"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/pass_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pass"
-        app:layout_constraintBottom_toBottomOf="@+id/roll_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/roll_button" />
-
-    <Button
-        android:id="@+id/new_game_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="New Game"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/rollingDieFragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/navigation_graph" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

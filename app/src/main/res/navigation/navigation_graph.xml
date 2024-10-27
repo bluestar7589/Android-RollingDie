@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/newGame">
+
+    <fragment
+        android:id="@+id/newGame"
+        android:name="com.example.rollingdie.NewGame"
+        android:label="game_new"
+        tools:layout="@layout/game_new">
+        <action
+            android:id="@+id/newGameToRollingDie"
+            app:destination="@id/screenGame" />
+    </fragment>
+    <fragment
+        android:id="@+id/screenGame"
+        android:name="com.example.rollingdie.ScreenGame"
+        android:label="game_screen"
+        tools:layout="@layout/game_screen" >
+        <action
+            android:id="@+id/action_screenGame_to_newGame"
+            app:destination="@id/newGame" />
+    </fragment>
+</navigation>
