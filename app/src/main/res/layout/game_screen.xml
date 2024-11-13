@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Roll"
-        app:layout_constraintBottom_toTopOf="@+id/back_button"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
         app:layout_constraintEnd_toStartOf="@+id/pass_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
@@ -83,7 +83,7 @@
         app:layout_constraintStart_toEndOf="@+id/roll_button" />
 
     <Button
-        android:id="@+id/back_button"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
