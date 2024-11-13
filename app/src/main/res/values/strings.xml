@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Rolling Die</string>
+    <string name="rolling_dice_game">Rolling Dice Game</string>
+    <string name="new_game">New Game</string>
+    <string name="player1Turn">Player 1\'s Turn</string>
+    <string name="dashBoard">Current Score: 0\nPlayer 1 Total: 0\nPlayer 2 Total: 0</string>
 </resources>
