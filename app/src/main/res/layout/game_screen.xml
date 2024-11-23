@@ -7,34 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".ScreenGame">
 
-    <!-- ImageView to display the die rolling animation -->
-    <ImageView
-        android:id="@+id/die_gif"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- TextView to show whose turn it is -->
-
     <!-- GridLayout to show the current score and total scores for each player -->
 
     <TextView
         android:id="@+id/turn_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="32dp"
         android:text="@string/player1Turn"
-        android:textSize="18sp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/die_gif" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <!-- TextView to display the result of the die roll -->
+
+    <!-- Button to roll the die -->
+
+    <!-- Button to pass the turn -->
+
+    <!-- Button to back to a new game screen-->
 
     <GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="2"
@@ -43,117 +41,122 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/turn_info">
+        app:layout_constraintTop_toBottomOf="@+id/turn_info"
+        app:layout_constraintVertical_bias="0.5">
 
         <!-- TextView for Current Score label -->
+
+        <!-- TextView for Current Score value -->
         <TextView
             android:id="@+id/current_score_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Current Score: "
+            android:layout_row="0"
             android:layout_column="0"
-            android:layout_row="0" />
+            android:text="@string/current_score"
+            android:textSize="24sp" />
 
-        <!-- TextView for Current Score value -->
         <TextView
             android:id="@+id/current_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:layout_column="1"
             android:layout_row="0"
-            android:layout_marginStart="20dp"/>
+            android:layout_column="1"
+            android:layout_marginStart="20dp"
+            android:text="@string/zero"
+            android:textSize="20sp" />
 
         <!-- TextView for Player 1 Total label -->
         <TextView
             android:id="@+id/player1_total_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Player 1 Total: "
+            android:layout_row="1"
             android:layout_column="0"
-            android:layout_row="1" />
+            android:text="@string/player_1_total"
+            android:textSize="20sp" />
 
         <!-- TextView for Player 1 Total value -->
         <TextView
             android:id="@+id/player1_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:layout_column="1"
             android:layout_row="1"
-            android:layout_marginStart="20dp"/>
+            android:layout_column="1"
+            android:layout_marginStart="20dp"
+            android:text="@string/zero"
+            android:textSize="20sp" />
 
         <!-- TextView for Player 2 Total label -->
         <TextView
             android:id="@+id/player2_total_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Player 2 Total: "
+            android:layout_row="2"
             android:layout_column="0"
-            android:layout_row="2" />
+            android:text="@string/player_2_total"
+            android:textSize="20sp" />
 
         <!-- TextView for Player 2 Total value -->
         <TextView
             android:id="@+id/player2_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:layout_column="1"
             android:layout_row="2"
-            android:layout_marginStart="20dp"/>
+            android:layout_column="1"
+            android:layout_marginStart="20dp"
+            android:text="@string/zero"
+            android:textSize="20sp" />
     </GridLayout>
 
-    <!-- TextView to display the result of the die roll -->
     <TextView
         android:id="@+id/result_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="Result"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/roll_button"
+        android:text="@string/result"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/pass_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!-- Button to roll the die -->
-    <Button
-        android:id="@+id/roll_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Roll"
-        app:layout_constraintBottom_toTopOf="@+id/backButton"
-        app:layout_constraintEnd_toStartOf="@+id/pass_button"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="0.5" />
 
-    <!-- Button to pass the turn -->
     <Button
         android:id="@+id/pass_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pass"
-        app:layout_constraintBottom_toBottomOf="@+id/roll_button"
+        android:text="@string/pass"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/roll_button" />
+        app:layout_constraintStart_toEndOf="@+id/roll_button"
+        app:layout_constraintTop_toBottomOf="@+id/result_text"
+        app:layout_constraintVertical_bias="0.5" />
 
-    <!-- Button to back to a new game screen-->
+    <Button
+        android:id="@+id/roll_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/roll"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        app:layout_constraintEnd_toStartOf="@+id/pass_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result_text"
+        app:layout_constraintVertical_bias="0.5" />
+
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="Back"
+        android:layout_marginBottom="32dp"
+        android:text="@string/back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass_button"
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

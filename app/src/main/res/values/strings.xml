@@ -3,5 +3,15 @@
     <string name="rolling_dice_game">Rolling Dice Game</string>
     <string name="new_game">New Game</string>
     <string name="player1Turn">Player 1\'s Turn</string>
+    <string name="player2Turn">Player 2\'s Turn</string>
+    <string name="winner">Player %1$d wins!</string>
     <string name="dashBoard">Current Score: 0\nPlayer 1 Total: 0\nPlayer 2 Total: 0</string>
+    <string name="current_score">Current Score:</string>
+    <string name="zero">0</string>
+    <string name="player_1_total">Player 1 Total:</string>
+    <string name="player_2_total">Player 2 Total:</string>
+    <string name="result">Result</string>
+    <string name="roll">Roll</string>
+    <string name="pass">Pass</string>
+    <string name="back">Back</string>
 </resources>
