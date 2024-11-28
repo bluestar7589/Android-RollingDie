@@ -8,7 +8,7 @@ Objective: The first player to reach a score of 100 wins the game. However, ther
 #### Players:
 
 The game is for 2 players.
-Each player takes turns rolling the die and trying to accumulate a total score of 100 or more to win.
+Each player takes turns rolling the die and trying to accumulate a total score of 10 or more to win.
 
 #### Rolling the Die:
 On your turn, you roll a standard 6-sided die.
