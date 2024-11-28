@@ -2,7 +2,7 @@
 [Nguyen, Thien] (https://github.com/bluestar7589)
 
 ## Game Rolling Die
-Objective: The first player to reach a score of 100 wins the game. However, there are risks with each roll. Be strategic!
+Objective: The first player to reach a score of 10 wins the game. However, there are risks with each roll. Be strategic!
 
 ### How to Play:
 #### Players:
@@ -24,7 +24,7 @@ By passing, you save your current turn score, which is added to your overall tot
 Your turn then ends, and the next player rolls.
 
 #### Winning the Game:
-The first player to reach or exceed 100 points on their overall total score wins the game.
+The first player to reach or exceed 10 points on their overall total score wins the game.
 
 # List of features used in this project
 ## Fragment
